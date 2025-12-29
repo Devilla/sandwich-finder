@@ -47,21 +47,22 @@ Press `Ctrl+C` to stop. Run again to resume from where you left off.
 
 Results are saved to `sandwiches.csv` with these columns:
 
-| Column               | Description                              |
-| -------------------- | ---------------------------------------- |
-| `frontrun_etherscan` | Link to frontrun tx on Etherscan         |
-| `victim_etherscan`   | Link to victim tx on Etherscan           |
-| `backrun_etherscan`  | Link to backrun tx on Etherscan          |
-| `block_number`       | Block where attack occurred              |
-| `timestamp`          | Unix timestamp                           |
-| `datetime_utc`       | Human readable date/time                 |
-| `pair_address`       | Uniswap V2 pair contract                 |
-| `attacker_address`   | MEV bot address                          |
-| `frontrun_tx`        | Frontrun transaction hash                |
-| `victim_tx`          | Victim transaction hash                  |
-| `backrun_tx`         | Backrun transaction hash                 |
-| `num_victims`        | Number of victims in this sandwich       |
-| `revenue_raw`        | Attacker profit in token's smallest unit |
+| Column               | Description                            |
+| -------------------- | -------------------------------------- |
+| `frontrun_etherscan` | Link to frontrun tx on Etherscan       |
+| `victim_etherscan`   | Link to victim tx on Etherscan         |
+| `backrun_etherscan`  | Link to backrun tx on Etherscan        |
+| `block_number`       | Block where attack occurred            |
+| `timestamp`          | Unix timestamp                         |
+| `datetime_utc`       | Human readable date/time               |
+| `pair_address`       | Uniswap V2 pair contract               |
+| `attacker_address`   | MEV bot address                        |
+| `frontrun_tx`        | Frontrun transaction hash              |
+| `victim_tx`          | Victim transaction hash                |
+| `backrun_tx`         | Backrun transaction hash               |
+| `num_victims`        | Number of victims in this sandwich     |
+| `revenue_eth`        | Attacker profit in ETH                 |
+| `revenue_raw`        | Attacker profit in wei (for precision) |
 
 ## Reset Progress
 

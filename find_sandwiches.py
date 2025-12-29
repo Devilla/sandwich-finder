@@ -189,6 +189,7 @@ def init_csv():
                 'victim_tx',
                 'backrun_tx',
                 'num_victims',
+                'revenue_eth',
                 'revenue_raw'
             ])
         print(f"Created {OUTPUT_CSV}")
@@ -203,6 +204,8 @@ def append_to_csv(sandwiches, block_timestamps):
             
             # Write one row per victim
             for victim_tx in s["victim_txs"]:
+                # Convert revenue from wei to ETH (divide by 10^18)
+                revenue_eth = s["revenue_raw"] / 1e18
                 writer.writerow([
                     f'{ETHERSCAN_TX}{s["frontrun_tx"]}',
                     f'{ETHERSCAN_TX}{victim_tx}',
@@ -216,6 +219,7 @@ def append_to_csv(sandwiches, block_timestamps):
                     victim_tx,
                     s["backrun_tx"],
                     s["num_victims"],
+                    f"{revenue_eth:.6f}",
                     s["revenue_raw"]
                 ])
 
