@@ -1,0 +1,17 @@
+# Environment variables (contains API keys)
+.env
+
+# Virtual environment
+venv/
+
+# Output files (can be large)
+sandwiches.csv
+progress.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
